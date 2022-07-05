@@ -1,5 +1,6 @@
+
 class item{
-  item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description);
+  item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description, this.path);
 
   int id = 0;
   String itemName = 'None';
@@ -8,6 +9,8 @@ class item{
   int stackSize = 0;
   String type = 'N/A';
   String description = 'N/A';
+  String path = '';
+
 
   int get_id(){
     return id;
@@ -29,11 +32,23 @@ class item{
     return stackSize;
   }
 
-  String get_type(){
+  String get_itemType(){
     return type;
   }
 
   String get_description(){
     return description;
+  }
+
+  String get_objectType(){
+    return 'item';
+  }
+
+  String get_path(){
+    return path;
+  }
+
+  List to_list(){
+    return [id, itemName, mats, durability, stackSize, type, description, path];
   }
 }

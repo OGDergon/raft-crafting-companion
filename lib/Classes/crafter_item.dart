@@ -1,7 +1,7 @@
 import 'item.dart';
 
 class crafter_item extends item{
-  crafter_item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description, this.craftTime) : super(0, 'None', [], 0, 0, 'N/A', 'N/A');
+  crafter_item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description, this.craftTime, this.path) : super(0, 'None', [], 0, 0, 'N/A', 'N/A', '');
 
   int craftTime = 0;
 
@@ -12,4 +12,9 @@ class crafter_item extends item{
   int stackSize = 0;
   String type = 'N/A';
   String description = 'N/A';
+  String path = '';
+
+  String get_objectType(){
+    return 'crafterItem';
+  }
 }

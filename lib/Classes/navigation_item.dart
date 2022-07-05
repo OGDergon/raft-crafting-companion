@@ -1,7 +1,7 @@
 import 'package:raft_dictionary/Classes/item.dart';
 
 class navigation_item extends item{
-  navigation_item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description, this.mod) : super(0, 'None', [], 0, 0, 'N/A', 'N/A');
+  navigation_item(this.id, this.itemName, this.mats, this.durability, this.stackSize, this.type, this.description, this.mod, this.path) : super(0, 'None', [], 0, 0, 'N/A', 'N/A', '');
 
   String mod = 'N/A';
 
@@ -12,4 +12,9 @@ class navigation_item extends item{
   int stackSize = 0;
   String type = 'N/A';
   String description = 'N/A';
+  String path = '';
+
+  String get_objectType(){
+    return 'navigation_Item';
+  }
 }
